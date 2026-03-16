@@ -1,0 +1,9 @@
+{
+    "base_url": "https://www.saucedemo.com/",
+    "browser": "chrome",
+    "headless": false,
+    "implicit_wait": 10,
+    "page_load_timeout": 30,
+    "environment": "QA",
+    "project_name": "STQA Framework Demo"
+}

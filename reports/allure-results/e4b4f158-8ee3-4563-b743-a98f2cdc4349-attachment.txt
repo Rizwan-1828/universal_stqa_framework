@@ -1,0 +1,11 @@
+2026-03-17 01:18:18 - INFO - 
+--- Starting Test: test_invalid_login ---
+2026-03-17 01:18:18 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:18:20 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:18:20 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:18:23 - INFO - Typing text 'invalid_user' into element: ('id', 'user-name')
+2026-03-17 01:18:25 - INFO - Typing text 'wrong_pass' into element: ('id', 'password')
+2026-03-17 01:18:26 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:18:27 - INFO - Retrieved text 'Epic sadface: Username and password do not match any user in this service' from element: ('css selector', "[data-test='error']")
+2026-03-17 01:18:27 - INFO - --- Finished Test: test_invalid_login. Tearing down driver. ---
+

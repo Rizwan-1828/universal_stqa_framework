@@ -1,0 +1,105 @@
+2026-03-17 01:10:54 - INFO - Session Base URL set to: https://www.saucedemo.com/
+2026-03-17 01:10:54 - INFO - 
+--- Starting Test: test_valid_login ---
+2026-03-17 01:10:54 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:10:55 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:10:55 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:11:01 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:11:02 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:11:04 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:11:05 - INFO - Retrieved text 'Products' from element: ('class name', 'title')
+2026-03-17 01:11:05 - INFO - --- Finished Test: test_valid_login. Tearing down driver. ---
+
+2026-03-17 01:11:08 - INFO - 
+--- Starting Test: test_invalid_login ---
+2026-03-17 01:11:08 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:11:09 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:11:09 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:11:16 - INFO - Typing text 'invalid_user' into element: ('id', 'user-name')
+2026-03-17 01:11:17 - INFO - Typing text 'wrong_pass' into element: ('id', 'password')
+2026-03-17 01:11:18 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:11:20 - INFO - Retrieved text 'Epic sadface: Username and password do not match any user in this service' from element: ('css selector', "[data-test='error']")
+2026-03-17 01:11:20 - INFO - --- Finished Test: test_invalid_login. Tearing down driver. ---
+
+2026-03-17 01:11:22 - INFO - 
+--- Starting Test: test_valid_checkout ---
+2026-03-17 01:11:22 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:11:24 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:11:24 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:11:30 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:11:31 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:11:32 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:11:34 - INFO - Clicking on element with locator: ('id', 'add-to-cart-sauce-labs-backpack')
+2026-03-17 01:11:35 - INFO - Element found present on page: ('class name', 'shopping_cart_badge')
+2026-03-17 01:11:35 - INFO - Retrieved text '1' from element: ('class name', 'shopping_cart_badge')
+2026-03-17 01:11:35 - INFO - Clicking on element with locator: ('class name', 'shopping_cart_link')
+2026-03-17 01:11:37 - INFO - Clicking on element with locator: ('id', 'checkout')
+2026-03-17 01:11:38 - INFO - Typing text 'John' into element: ('id', 'first-name')
+2026-03-17 01:11:39 - INFO - Typing text 'Doe' into element: ('id', 'last-name')
+2026-03-17 01:11:40 - INFO - Typing text '12345' into element: ('id', 'postal-code')
+2026-03-17 01:11:41 - INFO - Clicking on element with locator: ('id', 'continue')
+2026-03-17 01:11:43 - INFO - Clicking on element with locator: ('id', 'finish')
+2026-03-17 01:11:44 - INFO - Element found present on page: ('class name', 'complete-header')
+2026-03-17 01:11:44 - INFO - Retrieved text 'Thank you for your order!' from element: ('class name', 'complete-header')
+2026-03-17 01:11:44 - INFO - --- Finished Test: test_valid_checkout. Tearing down driver. ---
+
+2026-03-17 01:11:47 - INFO - 
+--- Starting Test: test_invalid_checkout ---
+2026-03-17 01:11:47 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:11:48 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:11:48 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:11:53 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:11:55 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:11:56 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:11:57 - INFO - Clicking on element with locator: ('id', 'add-to-cart-sauce-labs-backpack')
+2026-03-17 01:11:58 - INFO - Clicking on element with locator: ('class name', 'shopping_cart_link')
+2026-03-17 01:12:00 - INFO - Clicking on element with locator: ('id', 'checkout')
+2026-03-17 01:12:01 - INFO - Clicking on element with locator: ('id', 'continue')
+2026-03-17 01:12:02 - INFO - Retrieved text 'Error: First Name is required' from element: ('css selector', "[data-test='error']")
+2026-03-17 01:12:02 - INFO - --- Finished Test: test_invalid_checkout. Tearing down driver. ---
+
+2026-03-17 01:12:05 - INFO - 
+--- Starting Test: test_valid_cart ---
+2026-03-17 01:12:05 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:12:06 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:12:06 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:12:14 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:12:16 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:12:17 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:12:18 - INFO - Clicking on element with locator: ('id', 'add-to-cart-sauce-labs-backpack')
+2026-03-17 01:12:20 - INFO - Element found present on page: ('class name', 'shopping_cart_badge')
+2026-03-17 01:12:20 - INFO - Retrieved text '1' from element: ('class name', 'shopping_cart_badge')
+2026-03-17 01:12:20 - INFO - Clicking on element with locator: ('class name', 'shopping_cart_link')
+2026-03-17 01:12:21 - INFO - Element found present on page: ('class name', 'cart_list')
+2026-03-17 01:12:21 - INFO - --- Finished Test: test_valid_cart. Tearing down driver. ---
+
+2026-03-17 01:12:23 - INFO - 
+--- Starting Test: test_invalid_cart ---
+2026-03-17 01:12:23 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:12:25 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:12:25 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:12:33 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:12:34 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:12:35 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:12:37 - INFO - Clicking on element with locator: ('class name', 'shopping_cart_link')
+2026-03-17 01:12:38 - INFO - Element found present on page: ('class name', 'cart_list')
+2026-03-17 01:12:48 - INFO - --- Finished Test: test_invalid_cart. Tearing down driver. ---
+
+2026-03-17 01:12:51 - INFO - 
+--- Starting Test: test_valid_ui_elements ---
+2026-03-17 01:12:51 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:12:52 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:12:52 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:13:01 - INFO - Element found present on page: ('id', 'user-name')
+2026-03-17 01:13:01 - INFO - Element found present on page: ('id', 'password')
+2026-03-17 01:13:01 - INFO - Element found present on page: ('id', 'login-button')
+2026-03-17 01:13:01 - INFO - --- Finished Test: test_valid_ui_elements. Tearing down driver. ---
+
+2026-03-17 01:13:04 - INFO - 
+--- Starting Test: test_invalid_ui_elements ---
+2026-03-17 01:13:04 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:13:05 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:13:05 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:13:24 - WARNING - Element NOT found on page: ('id', 'non-existent-element')
+2026-03-17 01:13:24 - INFO - --- Finished Test: test_invalid_ui_elements. Tearing down driver. ---
+

@@ -1,0 +1,12 @@
+2026-03-17 01:22:50 - INFO - 
+--- Starting Test: test_invalid_cart ---
+2026-03-17 01:22:50 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:22:51 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:22:51 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:22:57 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:22:58 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:23:00 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:23:01 - INFO - Clicking on element with locator: ('class name', 'shopping_cart_link')
+2026-03-17 01:23:02 - INFO - Element found present on page: ('class name', 'cart_list')
+2026-03-17 01:23:12 - INFO - --- Finished Test: test_invalid_cart. Tearing down driver. ---
+

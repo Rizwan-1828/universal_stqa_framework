@@ -1,0 +1,10 @@
+2026-03-17 01:19:59 - INFO - 
+--- Starting Test: test_valid_ui_elements ---
+2026-03-17 01:19:59 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:20:00 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:20:00 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:20:05 - INFO - Element found present on page: ('id', 'user-name')
+2026-03-17 01:20:05 - INFO - Element found present on page: ('id', 'password')
+2026-03-17 01:20:05 - INFO - Element found present on page: ('id', 'login-button')
+2026-03-17 01:20:05 - INFO - --- Finished Test: test_valid_ui_elements. Tearing down driver. ---
+

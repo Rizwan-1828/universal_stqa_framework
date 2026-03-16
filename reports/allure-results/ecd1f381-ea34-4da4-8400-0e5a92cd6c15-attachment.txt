@@ -1,0 +1,15 @@
+2026-03-17 01:22:18 - INFO - 
+--- Starting Test: test_invalid_checkout ---
+2026-03-17 01:22:18 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:22:19 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:22:19 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:22:23 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:22:25 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:22:26 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:22:27 - INFO - Clicking on element with locator: ('id', 'add-to-cart-sauce-labs-backpack')
+2026-03-17 01:22:29 - INFO - Clicking on element with locator: ('class name', 'shopping_cart_link')
+2026-03-17 01:22:30 - INFO - Clicking on element with locator: ('id', 'checkout')
+2026-03-17 01:22:31 - INFO - Clicking on element with locator: ('id', 'continue')
+2026-03-17 01:22:32 - INFO - Retrieved text 'Error: First Name is required' from element: ('css selector', "[data-test='error']")
+2026-03-17 01:22:32 - INFO - --- Finished Test: test_invalid_checkout. Tearing down driver. ---
+

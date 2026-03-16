@@ -1,0 +1,320 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\Notes\8th Sem Internship\Project\Software-Test-Automation-
+configfile: pytest.ini
+plugins: allure-pytest-2.15.3
+collected 1 item
+
+pytest : Traceback (most 
+recent call last):
+At line:1 char:1
++ pytest tests/test_03_vali
+d_checkout.py --tb=long > 
+error_log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecifi    ed: 
+(Traceback (mo    st 
+recent call las    
+t)::String) [], Re    
+moteException
+    + FullyQualifiedEr    
+rorId : NativeComm    
+andError
+ 
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Scripts\pytest.ex
+e\__main__.py", line 6, in 
+<module>
+    
+sys.exit(console_main())
+             ~~~~~~~~~~~~^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\config\__init__.py
+", line 223, in 
+console_main
+    code = main()
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\config\__init__.py
+", line 199, in main
+    ret: ExitCode | int = c
+onfig.hook.pytest_cmdline_m
+ain(config=config)
+                          ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_hooks.py", line 
+512, in __call__
+    return 
+self._hookexec(self.name, 
+self._hookimpls.copy(), 
+kwargs, firstresult)
+           ~~~~~~~~~~~~~~^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_manager.py", line 
+120, in _hookexec
+    return self._inner_hook
+exec(hook_name, methods, 
+kwargs, firstresult)
+           ~~~~~~~~~~~~~~~~
+~~~~^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+167, in _multicall
+    raise exception
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+121, in _multicall
+    res = 
+hook_impl.function(*args)
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\main.py", line 
+365, in pytest_cmdline_main
+    return 
+wrap_session(config, _main)
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\main.py", line 
+353, in wrap_session
+    config.hook.pytest_sess
+ionfinish(
+    ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~^
+        session=session, ex
+itstatus=session.exitstatus
+        ^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_hooks.py", line 
+512, in __call__
+    return 
+self._hookexec(self.name, 
+self._hookimpls.copy(), 
+kwargs, firstresult)
+           ~~~~~~~~~~~~~~^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_manager.py", line 
+120, in _hookexec
+    return self._inner_hook
+exec(hook_name, methods, 
+kwargs, firstresult)
+           ~~~~~~~~~~~~~~~~
+~~~~^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+167, in _multicall
+    raise exception
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+139, in _multicall
+    
+teardown.throw(exception)
+    
+~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\logging.py", line 
+873, in 
+pytest_sessionfinish
+    return (yield)
+            ^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+139, in _multicall
+    
+teardown.throw(exception)
+    
+~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\terminal.py", 
+line 960, in 
+pytest_sessionfinish
+    result = yield
+             ^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+139, in _multicall
+    
+teardown.throw(exception)
+    
+~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\_pytest\warnings.py", 
+line 118, in 
+pytest_sessionfinish
+    return (yield)
+            ^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+121, in _multicall
+    res = 
+hook_impl.function(*args)
+  File "D:\Notes\8th Sem In
+ternship\Project\Software-T
+est-Automation-\conftest.py
+", line 76, in 
+pytest_sessionfinish
+    allure.attach(
+    ~~~~~~~~~~~~~^
+        f.read(),
+        ^^^^^^^^^
+        name="\U0001f4dd 
+Full Execution Execution 
+Log",
+        ^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+        attachment_type=all
+ure.attachment_type.TEXT
+        ^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\allure_commons\_allure.py"
+, line 210, in __call__
+    plugin_manager.hook.att
+ach_data(body=body, 
+name=name, attachment_type=
+attachment_type, 
+extension=extension)
+    ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_hooks.py", line 
+512, in __call__
+    return 
+self._hookexec(self.name, 
+self._hookimpls.copy(), 
+kwargs, firstresult)
+           ~~~~~~~~~~~~~~^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_manager.py", line 
+120, in _hookexec
+    return self._inner_hook
+exec(hook_name, methods, 
+kwargs, firstresult)
+           ~~~~~~~~~~~~~~~~
+~~~~^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+167, in _multicall
+    raise exception
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\pluggy\_callers.py", line 
+121, in _multicall
+    res = 
+hook_impl.function(*args)
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\allure_pytest\listener.py"
+, line 254, in attach_data
+    self.allure_logger.atta
+ch_data(uuid4(), body, 
+name=name, attachment_type=
+attachment_type, 
+extension=extension)
+    ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\allure_commons\reporter.py
+", line 163, in attach_data
+    file_name = 
+self._attach(uuid, 
+name=name, attachment_type=
+attachment_type,
+                           
+  extension=extension, 
+parent_uuid=parent_uuid)
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\allure_commons\reporter.py
+", line 153, in _attach
+    self._items[last_uuid].
+attachments.append(attachme
+nt)
+    ~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\UNIQUE\App
+Data\Local\Programs\Python\
+Python314\Lib\site-packages
+\allure_commons\reporter.py
+", line 33, in __getitem__
+    return self.thread_cont
+ext.__getitem__(item)
+           ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~^^^^^^
+KeyError: None
+tests\test_03_valid_checkout.py .                                        [100%]

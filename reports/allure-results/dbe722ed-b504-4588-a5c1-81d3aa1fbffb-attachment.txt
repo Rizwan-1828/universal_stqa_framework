@@ -1,0 +1,12 @@
+2026-03-17 01:18:05 - INFO - Session Base URL set to: https://www.saucedemo.com/
+2026-03-17 01:18:05 - INFO - 
+--- Starting Test: test_valid_login ---
+2026-03-17 01:18:05 - INFO - Initializing Chrome Driver (Headless: False)
+2026-03-17 01:18:06 - INFO - Chrome Driver initialized successfully with 10s implicit wait
+2026-03-17 01:18:06 - INFO - Navigating to URL: https://www.saucedemo.com/
+2026-03-17 01:18:11 - INFO - Typing text 'standard_user' into element: ('id', 'user-name')
+2026-03-17 01:18:13 - INFO - Typing text 'secret_sauce' into element: ('id', 'password')
+2026-03-17 01:18:14 - INFO - Clicking on element with locator: ('id', 'login-button')
+2026-03-17 01:18:16 - INFO - Retrieved text 'Products' from element: ('class name', 'title')
+2026-03-17 01:18:16 - INFO - --- Finished Test: test_valid_login. Tearing down driver. ---
+

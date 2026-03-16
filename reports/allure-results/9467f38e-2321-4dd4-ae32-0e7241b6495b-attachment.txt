@@ -1,0 +1,11 @@
+[32mINFO    [0m STQA_Logger:conftest.py:27 Session Base URL set to: https://www.saucedemo.com/
+[32mINFO    [0m STQA_Logger:conftest.py:33 
+--- Starting Test: test_valid_login ---
+[32mINFO    [0m STQA_Logger:driver_setup.py:21 Initializing Chrome Driver (Headless: False)
+[32mINFO    [0m STQA_Logger:driver_setup.py:53 Chrome Driver initialized successfully with 10s implicit wait
+[32mINFO    [0m STQA_Logger:base_page.py:16 Navigating to URL: https://www.saucedemo.com/
+[32mINFO    [0m STQA_Logger:base_page.py:34 Typing text 'standard_user' into element: ('id', 'user-name')
+[32mINFO    [0m STQA_Logger:base_page.py:34 Typing text 'secret_sauce' into element: ('id', 'password')
+[32mINFO    [0m STQA_Logger:base_page.py:26 Clicking on element with locator: ('id', 'login-button')
+[32mINFO    [0m STQA_Logger:base_page.py:44 Retrieved text 'Products' from element: ('class name', 'title')
+[32mINFO    [0m STQA_Logger:conftest.py:41 --- Finished Test: test_valid_login. Tearing down driver. ---

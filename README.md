@@ -1,110 +1,103 @@
-# 🧪 Software Test Automation using Python & Selenium
+# Universal STQA Pytest Framework 🧪
 
-This project demonstrates automated testing of [SauceDemo](https://www.saucedemo.com/) using **Python 3** and **Selenium WebDriver**. It is created for **SE3010 – Software Engineering Process & Quality Management** – Assignment 02 (Part B).
+This is a robust, data-driven, and highly configurable UI test automation framework built on **Python**, **Selenium**, **Pytest**, and **Allure Reports**. It is designed using the **Page Object Model (POM)** architecture to be universally adaptable for testing *any* web application.
 
----
-
-## 📁 Folder & File Structure
-
-```
-Software-Test-Automation-/
-├── chromedriver.exe           # ChromeDriver binary
-├── driver_setup.py            # Common driver setup module
-├── screenshots/               # Screenshots saved for each test case
-│   ├── tc01_valid_login.png
-│   ├── tc03_valid_checkout.png
-│   └── ...
-├── tc01_valid_login.py        # ✅ Valid login test
-├── tc02_invalid_login.py      # ❌ Invalid login test
-├── tc03_valid_checkout.py     # ✅ Valid checkout test
-├── tc04_invalid_checkout.py   # ❌ Invalid checkout test
-├── tc05_valid_cart.py         # ✅ Valid cart functionality test
-├── tc06_invalid_cart.py       # ❌ Invalid cart interaction test
-├── tc07_valid_ui_elements.py  # ✅ UI validation test
-├── tc08_invalid_ui_elements.py # ❌ UI negative test
-```
-
-## ⚙️ Setup Instructions
-
-### ✅ Prerequisites
-- Python 3.12+ installed
-- Google Chrome installed (latest)
-- Matching version of chromedriver.exe in project root
-- Selenium installed:
-```bash
-pip install selenium
-```
-
-## 🚀 How to Run Tests
-
-Run individual test cases using:
-
-```bash
-python tc01_valid_login.py
-python tc02_invalid_login.py
-python tc03_valid_checkout.py
-...
-```
-
-📸 Screenshots are saved automatically to the `screenshots/` folder.
-
-## 🔍 Test Case Summary
-
-| Test Case File | Description | Expected Result |
-|----------------|-------------|----------------|
-| `tc01_valid_login.py` | Login with valid credentials | ✅ Login success |
-| `tc02_invalid_login.py` | Login with invalid credentials | ❌ Login fails |
-| `tc03_valid_checkout.py` | Full checkout process | ✅ Checkout success |
-| `tc04_invalid_checkout.py` | Invalid checkout flow | ❌ Checkout fails |
-| `tc05_valid_cart.py` | Add/remove items in cart | ✅ Cart updates |
-| `tc06_invalid_cart.py` | Invalid cart actions | ❌ Action blocked |
-| `tc07_valid_ui_elements.py` | Check important UI elements | ✅ Elements exist |
-| `tc08_invalid_ui_elements.py` | Check missing/wrong elements | ❌ Elements fail |
-
-## 🖼️ Sample Screenshots
-
-Below are screenshots from all test runs:
-
-### ✅ Valid Login
-![Login Success](screenshots/tc01_valid_login.png)
-
-### ❌ Invalid Login
-![Login Error](screenshots/tc02_invalid_login.png)
-
-### ✅ Valid Checkout
-![Checkout Success](screenshots/tc03_valid_checkout.png)
-
-### ❌ Invalid Checkout
-![Checkout Error](screenshots/tc04_invalid_checkout.png)
-
-### ✅ Valid Cart
-![Cart Test](screenshots/tc05_valid_cart.png)
-
-### ❌ Invalid Cart
-![Cart Error](screenshots/tc06_invalid_cart.png)
-
-### ✅ UI Elements Check
-![UI Elements Pass](screenshots/tc07_valid_ui_elements.png)
-
-
-## 🧠 Technologies Used
-* 🐍 Python 3.12
-* 🌐 Selenium WebDriver
-* 🧪 Automated UI Testing
-* 🖥️ Chrome + ChromeDriver
-
-
-## 📄 License
-This project is for academic and learning purposes only.
+## 🚀 Features
+- **Centralized Configuration:** Define target URLs and browser behaviors in `config.json`.
+- **1-Click Execution:** Run the entire suite and automatically generate a gorgeous HTML report using `run_tests.bat`.
+- **Deep Logging:** Every UI interaction (click, type, wait) is logged to timestamped files and automatically attached to the final test report.
+- **Auto-Screenshots:** Automatically captures and attaches screenshots of the browser state anytime a test fails.
 
 ---
 
-### ✅ Next Steps
-1. Create a new README.md in your project root.
-2. Paste the content above.
-3. Push to GitHub:
-```bash
-git add README.md
-git commit -m "Add full structured README"
-git push origin main
+## 💻 Setup Instructions
+
+### 1. Requirements
+Ensure you have the following installed on your machine:
+- **Python 3.10+**
+- **Google Chrome** (Selenium automatically downloads the matching driver)
+- **Node.js** (Required to view the Allure HTML reports)
+
+### 2. Installation
+Open your terminal in the framework root folder and install the dependencies:
+```cmd
+pip install -r requirements.txt
+npm install -g allure-commandline
+```
+
+---
+
+## 🎯 How to Test Your Own Project
+
+You can use this framework to test any live website (like `https://google.com`) or a project running locally on your machine (like `http://localhost:3000`).
+
+### Method 1: Using the Configuration File (Recommended)
+1. Open `config.json` in the root directory.
+2. Change the `"base_url"` to your application's URL.
+   - *Example for Live:* `"base_url": "https://my-live-app.com/"*
+   - *Example for Local:* `"base_url": "http://localhost:5173/"*
+3. Double-click **`run_tests.bat`** (or execute it in the terminal). The tests will run against your provided URL and automatically open the Allure report when finished!
+
+### Method 2: Command Line Override
+If you are integrating this into a CI/CD pipeline, you don't need to change `config.json`. You can pass the URL directly into the runner script:
+```cmd
+.\run_tests.bat "https://staging.my-app.com/"
+```
+
+---
+
+## 🧩 Building New Tests (Page Object Model)
+
+To write tests for your own application, follow these two steps:
+
+### 1. Create a Page Object
+Inside the `pages/` folder, create a new python file for representing a page (e.g., `checkout_page.py`). Inherit from `BasePage` to get access to the universal logged actions.
+
+```python
+from pages.base_page import BasePage
+from selenium.webdriver.common.by import By
+import allure
+
+class MyCustomPage(BasePage):
+    # 1. Define Locators
+    SUBMIT_BUTTON = (By.ID, "submit-btn")
+    
+    # 2. Define Actions
+    @allure.step("Clicking the submit button on custom page")
+    def click_submit(self):
+        self.click(self.SUBMIT_BUTTON)
+```
+
+### 2. Write the Test
+Inside the `tests/` folder, create a new file starting with `test_` (e.g., `test_my_feature.py`). Use the `base_url` and `driver` fixtures.
+
+```python
+import allure
+from pages.my_custom_page import MyCustomPage
+
+@allure.title("TC01 - Verify Custom Page Submission")
+def test_submission(driver, base_url):
+    page = MyCustomPage(driver)
+    
+    # The base_url comes automatically from config.json or the CLI tag!
+    page.open_url(base_url) 
+    page.click_submit()
+    assert True
+```
+
+---
+
+## 📂 Framework Structure
+```text
+📁 STQA-Framework/
+ ┣ 📄 config.json         <-- Edit your URLs and timeouts here
+ ┣ 📄 run_tests.bat       <-- 1-Click execution script
+ ┣ 📁 pages/              <-- Store Page Objects (Locators + Actions)
+ ┃ ┗ 📄 base_page.py      <-- Universal selenium controls and logging
+ ┣ 📁 tests/              <-- Store Pytest files
+ ┣ 📁 utils/
+ ┃ ┣ 📄 driver_setup.py   <-- Chrome initialization handling (Headless configuration)
+ ┃ ┗ 📄 logger.py         <-- Internal logging engine
+ ┣ 📄 conftest.py         <-- Pytest hooks (Screenshot triggers, Allure attachment)
+ ┗ 📄 requirements.txt
 ```
