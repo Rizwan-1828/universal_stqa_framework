@@ -1,7 +1,0 @@
-[32mINFO    [0m STQA_Logger:conftest.py:33 
---- Starting Test: test_invalid_ui_elements ---
-[32mINFO    [0m STQA_Logger:driver_setup.py:21 Initializing Chrome Driver (Headless: False)
-[32mINFO    [0m STQA_Logger:driver_setup.py:53 Chrome Driver initialized successfully with 10s implicit wait
-[32mINFO    [0m STQA_Logger:base_page.py:16 Navigating to URL: https://www.saucedemo.com/
-[33mWARNING [0m STQA_Logger:base_page.py:54 Element NOT found on page: ('id', 'non-existent-element')
-[32mINFO    [0m STQA_Logger:conftest.py:41 --- Finished Test: test_invalid_ui_elements. Tearing down driver. ---

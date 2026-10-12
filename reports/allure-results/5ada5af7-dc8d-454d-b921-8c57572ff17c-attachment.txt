@@ -1,8 +1,0 @@
-2026-03-17 01:23:23 - INFO - 
---- Starting Test: test_invalid_ui_elements ---
-2026-03-17 01:23:23 - INFO - Initializing Chrome Driver (Headless: False)
-2026-03-17 01:23:24 - INFO - Chrome Driver initialized successfully with 10s implicit wait
-2026-03-17 01:23:24 - INFO - Navigating to URL: https://www.saucedemo.com/
-2026-03-17 01:23:39 - WARNING - Element NOT found on page: ('id', 'non-existent-element')
-2026-03-17 01:23:39 - INFO - --- Finished Test: test_invalid_ui_elements. Tearing down driver. ---
-
